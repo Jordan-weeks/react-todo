@@ -7,6 +7,7 @@ import { useState } from 'react'
 
 function App() {
   const [showForm,setShowForm] = useState(false)
+
   const [tasks, setTasks] = useState([
     {
         text: 'this is a test',
@@ -41,10 +42,13 @@ function App() {
         ...task, reminder: !task.reminder } : task
     ))
   }
+  const toggleForm = () =>{
+    setShowForm(!showForm)
+  }
 
   return (
     <div className="container">
-     <Header title="hello" />
+     <Header onFormToggle= {toggleForm} formStatus = {showForm}/>
      {showForm && <AddTask onAdd={addTask}/>}
     <Tasks tasks={tasks} onDelete = {deleteTask} reminder= {toggleReminder} />
     </div>
