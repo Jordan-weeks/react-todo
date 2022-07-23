@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "text": "NEW TASK",
+      "dueDate": "",
+      "reminder": false,
+      "id": 1
+    },
+    {
+      "text": "TASK 2",
+      "dueDate": "2022-07-25",
+      "reminder": false,
+      "id": 2
+    }
+  ]
+}
